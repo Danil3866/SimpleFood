@@ -3,6 +3,508 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+}
+
+.logo,
+.menu__link,
+.menu__user-nav-link {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border-color 0.3s, background-color 0.3s, stroke 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.logo:focus,
+.menu__link:focus,
+.menu__user-nav-link:focus {
+  border-color: $orange-900;
+}
+
+.logo {
+  display: block;
+  padding: 5px 0;
+
+  &--footer {
+    margin-bottom: 30px;
+  }
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.5;
+  border-color: transparent;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    margin-right: 62px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    transition: color 0.3s, border-color 0.3s, text-shadow 0.3s;
+  }
+
+  &__link:hover {
+    color: $orange-900;
+  }
+
+  &__link:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    border-color: transparent;
+    color: $dark;
+  }
+
+  &__link--active {
+    color: $orange-900;
+  }
+
+  &__user-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-nav-item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__user-nav-link {
+    padding: 10px;
+    display: block;
+    position: relative;
+    line-height: 0;
+  }
+
+  &__user-nav-link:hover {
+    background-color: $orange-900;
+
+    path,
+    ellipse {
+      stroke: #fff;
+    }
+
+    .menu__user-nav-num {
+      background-color: #fff;
+      color: $orange-900;
+    }
+  }
+
+  &__user-nav-link:focus {
+    background-color: rgba(255, 122, 80, 0.1);
+
+    path,
+    ellipse {
+      stroke: #000;
+    }
+
+    .menu__user-nav-num {
+      background-color: $orange-900;
+      color: #fff;
+    }
+  }
+
+  &__user-nav-link:active {
+    border-color: transparent;
+  }
+
+  &__user-nav-num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: $orange-900;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    transform: translateX(-5px);
+    top: 6px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  margin-bottom: 60px;
+
+  &__item:not(:last-child) {
+    margin-right: 70px;
+  }
+
+  &__item-form {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__item-links {
+    max-width: 570px;
+    width: 100%;
+  }
+
+  &__item-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 175px;
+  }
+
+  &__item-element {
+    margin-bottom: 20px;
+    margin-right: 70px;
+  }
+}
+
+.form {
+  &__input {
+    border: 2px solid $gray;
+    background: #FFF;
+    border-radius: 5px;
+    padding: 13px 15px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+    max-width: 200px;
+    transition: border-color 0.3s;
+  }
+
+  &__input:focus {
+    border-color: $orange-900;
+  }
+
+  &__input::placeholder {
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  &__input:hover::placeholder {
+    color: $darkBlue-900;
+  }
+
+  &__button {
+    @extend %rubik-500;
+    font-size: 14px;
+    padding: 13px 36px 13px 68px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  &__button-telegram {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+  }
+
+  &__button:hover,
+  &__button:focus,
+  &__button:active {
+    path {
+      fill: $orange-900;
+    }
+  }
+}
+
+.contacts {
+  font-style: normal;
+  max-width: 195px;
+
+  &__link {
+    display: block;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    line-height: 2;
+  }
+
+  &__link--adress::before,
+  &__link--phone::before,
+  &__link--mail::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  &__link--adress::before {
+    background-image: url('../images/icons/location.svg');
+    width: 15px;
+    height: 18px;
+  }
+
+  &__link--phone::before {
+    background-image: url('../images/icons/calling.svg');
+    width: 19px;
+    height: 19px;
+  }
+
+  &__link--mail::before {
+    background-image: url('../images/icons/message.svg');
+    width: 20px;
+    height: 18px;
+  }
+
+  &__social-list {
+    display: flex;
+  }
+
+  &__social-link {
+    display: block;
+    margin-right: 13px;
+    width: 39px;
+    height: 39px;
+  }
+
+  &__social-link svg {
+    border: 2px solid transparent;
+    border-radius: 50%;
+  }
+
+  &__social-link:focus {
+    svg {
+      border-color: $orange-900;
+    }
+
+    circle {
+      fill: #FFF2ED;
+    }
+  }
+
+  &__social-link:hover {
+    circle {
+      fill: $orange-900;
+    }
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__social-link:active {
+    border-color: transparent;
+
+    circle {
+      fill: #FFF2ED;
+    }
+
+    path {
+      fill: $orange-900;
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(194, 194, 194, 0.2);
+  padding: 30px 0;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.hero {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 450px;
+    margin-right: 160px;
+  }
+
+  &__title {
+    color: $darkBlue-900;
+    @extend %rubik-500;
+    font-size: 66px;
+    margin-bottom: 20px;
+  }
+
+  &__title-span {
+    display: flex;
+    color: $orange-900;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  &__text,
+  &__more {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    margin-right: 34px;
+  }
+}
+
+.popular {
+  &__filter {
+    display: flex;
+    margin-bottom: 45px;
+  }
+
+  &__filter-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__btn {
+    padding: 22px 32px 22px 86px;
+    background-color: #fff;
+    font-size: 20px;
+    color: $darkBlue-900;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid $silver-200;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s, fill 0.3s;
+  }
+
+  &__btn:focus,
+  &__btn:hover {
+    border-color: $orange-900;
+  }
+
+  &__btn:active,
+  &__btn:hover {
+    background-color: rgba(255, 122, 80, 0.1);
+  }
+
+  &__btn:hover {
+    color: $orange-900;
+
+    path {
+      fill: $orange-900;
+    }
+  }
+
+  &__btn:active {
+    box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
+    border-color: transparent;
+    color: $darkBlue-900;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 13px;
+    left: 32px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__item-link {
+    position: relative;
+    height: 100%;
+    padding: 170px 15px 20px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid $silver-200;
+    transition: border-color 0.3s;
+  }
+
+  &__item-link:hover {
+    border-color: $orange-900;
+  }
+
+  &__item-link--cheeseburger::before,
+  &__item-link--beefburger::before,
+  &__item-link--royal-cheeseburger::before,
+  &__item-link--black-hamburger::before,
+  &__item-link--chicken-burger::before {
+    content: '';
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__item-link--cheeseburger::before {
+    background-image: url('../images/food/cheeseburger.png');
+  }
+
+  &__item-link--beefburger::before {
+    background-image: url('../images/food/beefburger.png');
+  }
+
+  &__item-link--royal-cheeseburger::before {
+    background-image: url('../images/food/royal-cheeseburger.png');
+  }
+
+  &__item-link--black-hamburger::before {
+    background-image: url('../images/food/black-hamburger.png');
+  }
+
+  &__item-link--chicken-burger::before {
+    background-image: url('../images/food/chicken-burger.png');
+  }
+
+  &__text {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    @extend %rubik-500;
+    display: block;
+    line-height: 1.4;
+    color: $darkBlue-900;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  &__add {
+    padding: 7px 16px;
+    font-size: 14px;
+  }
+
+  &__more {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .mixitup-control-active {
+    background-color: $orange-900;
+    color: #fff;
+
+    path {
+      fill: #fff;
+    }
+  }
+}
+
 
 
 
