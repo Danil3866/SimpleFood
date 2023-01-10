@@ -4,6 +4,12 @@ $gray: #c2c2c2;
 $darkBlue-900: #363853;
 $dark: #31352b;
 $silver-100: #f9faff;
+$breakpoints: (
+  "phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1200px
+);
 
 %rubik-300 {
   font-family: 'Rubik', sans-serif;

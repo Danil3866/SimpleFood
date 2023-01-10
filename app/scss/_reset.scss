@@ -32,7 +32,7 @@ dd {
   margin: 0;
 }
 
-ul[class] {
+ul {
   list-style: none;
 }
 
@@ -57,6 +57,7 @@ button {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
