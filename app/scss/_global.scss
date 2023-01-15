@@ -38,6 +38,14 @@ body {
 
 .section {
   padding: 60px 0;
+
+  @include mq('tablet-2') {
+    padding: 40px 0;
+  }
+
+  @include mq('phone') {
+    padding: 20px 0;
+  }
 }
 
 .title {
@@ -46,6 +54,15 @@ body {
   font-size: 36px;
   text-align: center;
   margin-bottom: 45px;
+
+  @include mq('tablet-2') {
+    font-size: 28px;
+  }
+
+  @include mq('phone') {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
 }
 
 .btn {
@@ -60,7 +77,7 @@ body {
   &:hover,
   &:active {
     color: $orange-900;
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 
   &:focus {
@@ -75,6 +92,12 @@ body {
     box-shadow: none;
     background-color: #FFF2ED;
   }
+
+  @include mq('desktop') {
+    font-size: 16px;
+    padding: 8px 24px;
+    border-radius: 3px;
+  }
 }
 
 .dynamic {
@@ -86,7 +109,7 @@ body {
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 
   &:active {
@@ -110,7 +133,7 @@ body {
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 
   &:hover {
@@ -121,5 +144,20 @@ body {
     text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
     color: $darkBlue-900;
     box-shadow: none;
+  }
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
