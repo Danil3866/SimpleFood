@@ -1,0 +1,25 @@
+@include('components/_head.html')
+
+@include('components/_header.html', {
+"mainActive": "nav__link--active"
+})
+
+<main class="main">
+
+  @include('components/_hero.html')
+
+  @include('components/_popular.html')
+
+  @include('components/_features.html')
+
+  @include('components/_places.html')
+
+  @include('components/_testimonials.html')
+
+  @include('components/_app.html')
+
+</main>
+
+@include('components/_footer.html')
+
+@include('components/_footer-scripts.html')

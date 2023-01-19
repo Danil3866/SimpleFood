@@ -1,0 +1,126 @@
+<header class="header">
+  <div class="container">
+    <nav class="menu">
+      <a class="menu__logo logo dynamic" href="#">
+        <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Логотип компании">
+      </a>
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav__link dynamic @@mainActive" href="#">
+            Главная
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link dynamic @@dishesActive" href="#">
+            Блюда
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link dynamic @@contactsActive" href="#">
+            Контакты
+          </a>
+        </li>
+      </ul>
+      <ul class="user-nav">
+        <li class="user-nav__item">
+          <button class="user-nav__btn dynamic">
+            <span class="sr-only">Поиск</span>
+            <svg class="user-nav__icon">
+              <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="user-nav__item">
+          <button class="user-nav__btn dynamic">
+            <span class="sr-only">Корзина</span>
+            <svg class="user-nav__icon">
+              <use xlink:href="images/sprite.svg#buy"></use>
+            </svg>
+            <span class="user-nav__num">4</span>
+          </button>
+        </li>
+      </ul>
+      <button class="header__burger" type="button">
+        <span>
+          <span class="sr-only">
+            Открыть меню
+          </span>
+        </span>
+      </button>
+    </nav>
+    <div class="menu-mobile">
+      <a class="menu-mobile__logo logo" href="#">
+        <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Логотип компании">
+      </a>
+      <button class="menu-mobile__close" type="button">
+        <span>
+          <span class="sr-only">
+            Закрыть меню
+          </span>
+        </span>
+      </button>
+      <ul class="menu-mobile__nav nav">
+        <li class="nav__item">
+          <a class="nav__link dynamic nav__link--active" href="#">
+            Главная
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link dynamic" href="#">
+            Блюда
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link dynamic" href="#">
+            Контакты
+          </a>
+        </li>
+      </ul>
+      <address class="menu-mobile__contacts contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--adress" href="#">
+              ул. Т.Г.Шевченко, 1
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--phone" href="tel:380501112233">
+              380501112233
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--mail" href="mailto:support@sfood.com">
+              support@sfood.com
+            </a>
+          </li>
+        </ul>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="sr-only">Перейти в Фейсбук</span>
+              <svg class="social__icon">
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="sr-only">Перейти в Твиттер</span>
+              <svg class="social__icon">
+                <use xlink:href="images/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="sr-only">Перейти в Инстаграм</span>
+              <svg class="social__icon">
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </div>
+</header>
