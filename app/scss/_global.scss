@@ -161,3 +161,40 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
+
+.breadcrumbs {
+  background-color: rgba(255, 122, 80, 0.1);
+
+  &__list {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #505050;
+    padding: 24px 0;
+  }
+
+  &__item {
+    padding-right: 18px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/sprite.svg#arrow');
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: invert(91%) sepia(7%) saturate(13%) hue-rotate(321deg) brightness(89%) contrast(81%);
+      width: 15px;
+      height: 12px;
+      right: 0px;
+      top: 1px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
