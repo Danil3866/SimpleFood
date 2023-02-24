@@ -4,22 +4,36 @@
       <h2 class="catalog__title title">
         Каталог продуктов
       </h2>
-      <div class="catalog__selects">
-        <select class="catalog__select-name select-style" name="" id="">
-          <option value="">По названию</option>
-          <option value="">Сначала дороже</option>
-          <option value="">Сначала дешевле</option>
-          <option value="">По популярности</option>
-        </select>
-        <select class="catalog__select-number select-style" name="" id="">
-          <option value="">по 12</option>
-          <option value="">по 9</option>
-          <option value="">по 6</option>
-        </select>
+      <div class="catalog__top-inner">
+        <button class="catalog__btn" type="button">
+          <span class="sr-only">
+            Открыть фильтр
+          </span>
+        </button>
+        <div class="catalog__selects">
+          <select class="catalog__select-name select-style" name="" id="">
+            <option value="">По названию</option>
+            <option value="">Сначала дороже</option>
+            <option value="">Сначала дешевле</option>
+            <option value="">По популярности</option>
+          </select>
+          <select class="catalog__select-number select-style" name="" id="">
+            <option value="">по 12</option>
+            <option value="">по 9</option>
+            <option value="">по 6</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="catalog__inner">
-      <div class="filters">
+      <div class="filters filter-mobile">
+        <button class="filter-mobile__close" type="button">
+          <span>
+            <span class="sr-only">
+              Закрыть фильтры
+            </span>
+          </span>
+        </button>
         <div class="filters__element filters__element--categories">
           <h3 class="filters__title">
             Категории
@@ -100,12 +114,12 @@
             Цена
           </h3>
           <div class="filters__price-inputs">
-            <label class="filters__price-label" for="">
+            <label class="filters__price-label" for="input-0">
               <span class="filters__price-text">от</span>
               <input class="filters__price-input" type="number" min="50" max="1500" id="input-0">
               <span class="filters__price-currency">₴</span>
             </label>
-            <label class="filters__price-label" for="">
+            <label class="filters__price-label" for="input-1">
               <span class="filters__price-text">до</span>
               <input class="filters__price-input" type="number" min="50" max="1500" id="input-1">
               <span class="filters__price-currency">₴</span>
@@ -118,7 +132,7 @@
         <ul class="catalog__list">
           <li class="catalog__items">
             <article class="product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link" href="product.html">
                 <img class="product-card__img" src="images/food/cheeseburger.png" alt="Чизбургер с листьями салата">
               </a>
               <h3 class="product-card__text">
@@ -360,7 +374,7 @@
               </a>
             </li>
             <li class="pagination__item">
-              <span class="pagination__link" href="#">
+              <span class="pagination__link">
                 ...
               </span>
             </li>
@@ -385,4 +399,3 @@
     </div>
   </div>
 </section>
-

@@ -20,22 +20,22 @@
 <header class="header">
   <div class="container">
     <nav class="menu">
-      <a class="menu__logo logo dynamic" href="#">
+      <a class="menu__logo logo dynamic" href="index.html">
         <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Логотип компании">
       </a>
       <ul class="nav">
         <li class="nav__item">
-          <a class="nav__link dynamic @nav__link--active" href="#">
+          <a class="nav__link dynamic nav__link--active" href="index.html">
             Главная
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link dynamic @@dishesActive" href="#">
+          <a class="nav__link dynamic @dishesActive" href="catalog.html">
             Блюда
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link dynamic @@contactsActive" href="#">
+          <a class="nav__link dynamic @contactsActive" href="#">
             Контакты
           </a>
         </li>
@@ -228,7 +228,7 @@
     <ul class="popular__content">
       <li class="popular__item mix category-all category-b">
         <article class="product-card">
-          <a class="product-card__link" href="#">
+          <a class="product-card__link" href="product.html">
             <img class="product-card__img" src="images/food/cheeseburger.png" alt="Чизбургер с листьями салата">
           </a>
           <h3 class="product-card__text">
@@ -244,7 +244,7 @@
           </div>
         </article>
       </li>
-      <li class="popular__item mix category-a category-b">
+      <li class="popular__item mix category-a category-b category-d">
         <article class="product-card">
           <a class="product-card__link" href="#">
             <img class="product-card__img" src="images/food/beefburger.png" width="140" height="140" alt="Бифбургер">
@@ -494,7 +494,7 @@
           </h3>
           <div class="restorant-card__inner">
             <div class="restorant-card__time">
-              <time datetime="11:00">11:00</time> - <time datetime="22:00">22:00</time>
+              <time datetime="11:00">12:00</time> - <time datetime="22:00">21:00</time>
             </div>
             <a class="restorant-card__crossing" href="#">
               <svg class="restorant-card__icon">
@@ -538,7 +538,7 @@
           </h3>
           <div class="restorant-card__inner">
             <div class="restorant-card__time">
-              <time datetime="11:00">11:00</time> - <time datetime="22:00">22:00</time>
+              <time datetime="11:00">06:00</time> - <time datetime="22:00">23:00</time>
             </div>
             <a class="restorant-card__crossing" href="#">
               <svg class="restorant-card__icon">
@@ -559,7 +559,7 @@
           </h3>
           <div class="restorant-card__inner">
             <div class="restorant-card__time">
-              <time datetime="11:00">11:00</time> - <time datetime="22:00">22:00</time>
+              <time datetime="11:00">06:00</time> - <time datetime="22:00">23:30</time>
             </div>
             <a class="restorant-card__crossing" href="#">
               <svg class="restorant-card__icon">
@@ -581,7 +581,7 @@
           </h3>
           <div class="restorant-card__inner">
             <div class="restorant-card__time">
-              <time datetime="11:00">11:00</time> - <time datetime="22:00">22:00</time>
+              <time datetime="11:00">09:00</time> - <time datetime="22:00">21:00</time>
             </div>
             <a class="restorant-card__crossing" href="#">
               <svg class="restorant-card__icon">
@@ -807,11 +807,11 @@
           </a>
         </li>
       </ul>
-      <address class="contacts">
+      <address class="contacts" id="contacts">
         <ul class="contacts__list">
           <li class="contacts__item">
             <a class="contacts__link contacts__link--adress" href="#">
-              ул. Т.Г.Шевченко, 1
+              ул.&nbsp;Т.Г.Шевченко,&nbsp;1
             </a>
           </li>
           <li class="contacts__item">
