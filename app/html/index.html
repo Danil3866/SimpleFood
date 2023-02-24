@@ -1,7 +1,9 @@
-@include('components/_head.html')
+@include('components/_head.html', {
+  "pageTitle": "Главная страница"
+})
 
 @include('components/_header.html', {
-"mainActive": "nav__link--active"
+  "mainActive": "nav__link--active"
 })
 
 <main class="main">
